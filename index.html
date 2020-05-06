@@ -47,35 +47,46 @@
         .third p{
         align-items: center !important;
         }
+        img{
+            width:100%;
+            object-fit: cover;
+        }
+        .firstC{
+            margin-right: -50px;
+            
+        }
+        .thirdC{
+            margin-left:-50px ;
+        }
+        
     </style>
   </head>
   <body>
        <!--Exercise 1-->
        <div class="container mt-5">
            <div class="row mb-5 text-center main-row">
-               <div class="col-6 bg-success" style="height: 400px;">
+               <div class="col-6 d-flex flex-column justify-content-center align-items-center bg-success " style="height: 400px;">
                    <p>First column</p>
-                   <p >Height 400px</p>
-                   <p>Green-ish background</p>
+                   <p>Height 400px</p>
+                   </p>Green-ish background</p>
                    <p>Text centered</p>
-
                </div>
                <div class="col-6" >
                    <div class="row">
-                   <div class=" second col-4 bg-primary" style="height: 400px;">
+                   <div class=" second col-4 bg-primary flex-column d-flex align-items-end justify-content-end" style="height: 400px;">
                        <p>Second column</p>
                        <p>Text to the bottom</p>
                        <p>Bold,blueish</p>
                        <p>background</p>
                    </div>
                    <div class="col-8">
-                       <div class="row bg-info " style="height:133px;" >
+                       <div class="row bg-info d-flex flex-column justify-content-center align-items-center" style="height:133px;" >
                         <p class = "third">Third column part 1</p>
                        </div>
-                       <div class="row bg-danger" style="height:133px;">
+                       <div class="row bg-danger d-flex flex-column justify-content-center align-items-center" style="height:133px;">
                            <p>Third column part 2</p>
                        </div>
-                       <div class="row bg-warning"style="height: 134px;">
+                       <div class="row bg-warning d-flex flex-column justify-content-center align-items-center"style="height: 134px;">
                            <p>Third column part 3</p>
                     
                        </div>
@@ -93,8 +104,8 @@
     <!--Exercise 2-->
     <div class="container">
     <div class="row text-center">
-        <div class="col-md-6 col-lg-4 mr-0 mb-5 ">
-            <div class=" card text-white bg-light mb-3 " style="max-width: 18rem;">
+        <div class="col-md-6 col-lg-4 mb-5 firstC ">
+            <div class=" card text-white bg-light mb-3  " style="max-width: 18rem;">
                 <div class="card-header"><h3>Free</h3></div>
                 <div class="card-body">
                   <h5 class="card-title">€0/mo</h5>
@@ -112,14 +123,17 @@
                 <div class="card-body">
                   <h5 class="card-title">€15/mo</h5>
                   <p class="card-text">20 Users included</p>
+                  <p>10 GB of storage</p>
                   <p>Piority email support</p>
                   <p>Help center access</p>
+                  
+
                   <button type="button" class="btn btn-primary btn-block btn-lg">Get started</button>
                 </div>
                 </div>
               </div>
               <div class="col-md-6 col-lg-4 mb-5">
-                <div class="card text-white bg-light mb-3"  style="max-width: 18rem;">
+                <div class="card text-white bg-light mb-3 thirdC"  style="max-width: 18rem;">
                     <div class="card-header">
                         <h3>Enterprise</h3>
                     </div>
@@ -145,11 +159,10 @@
                         <div class="card-body">
                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         </div>
-                        <div class="card-body text-right">
+                        <div class="card-body text-right d-inline">
                           
-                        <span><a href="#" class="card-link">View</a></span>
-                        <span><a href="#" class="card-link">Edit</a></span>
-                    
+                        <div class = "d-inline"><a href="#" class="card-link">View</a></div>
+                        <div  class = "d-inline"><a href="#" class="card-link">Edit</a></div>
                         <span>9 mins</span>
                         </div>
                       </div>
@@ -283,11 +296,11 @@
                 
             </div>
             <section class = "block">
-                <div class = "text-secondary"><h1>My Blog</h1></div>
+                <div class = "text-secondary"><h4 class = mt-5>My Blog</h4></div>
                 <div class="row">
                     <div class="col-8">
                     <div class="jumbotron">
-                        <img src ="http://placehold.it/750X300" class="img-fluid" alt="Responsive image">
+                       <img src ="http://placehold.it/750X300" class="img-fluid" alt="Responsive image">
                         <h4 class="display-4">Firts Post</h4>
                         <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
                         <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
@@ -295,9 +308,9 @@
                         <div class="row"><p>Posted on May 5th 2020, By Admin</p><hr></div>
                      </div>
                       </div> 
-                      <div class="col-4">
+                      <div class="col-4" style = "position: relative;">
                           <div class="row">
-                            <div class="card mb-4 mr-5 intro">
+                            <div class="card mb-4 intro ml-3 mb-5" style="bottom:50px;flex-grow:1.1;">
                                 <h5 class="card-header">Find in my blog</h5>
                                 <div class="card-body">
                                     <form>
@@ -310,16 +323,18 @@
                           </div>
                           <div class="row">
                               <div class="col">
-                                <div class="card mb-4">
+                                <div class="card mb-4" style="bottom: 70px;"">
                                     <h5 class="card-header">Categories</h5>
-                                    <div class="card-body">
+                                    <div class="card-body" >
                                       <ul>
-                                          <li>Web Design</li>
+                                          <div style="float:left">
+                                            <li>Web Design</li>
                                           <li>HTML</li>
-                                          <li>CSS</li>
-                                          <li>JavaScript</li>
+                                          <li>CSS</li></div>
+                                          <div style="margin-left: 150px;">
+                                            <li>JavaScript</li>
                                           <li>SASS</li>
-                                          <li>Bootstrap4</li>
+                                          <li>Bootstrap4</li></div>
                                       </ul>
                                     </div>
                                   </div>
@@ -327,7 +342,7 @@
                           </div>
                           <div class="row">
                               <div class="col">
-                                <div class="card">
+                                <div class="card" style="bottom: 70px;">
                                     <h5 class="card-header">Widgets</h5>
                                     <div class="card-body">
                                     
